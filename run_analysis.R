@@ -98,13 +98,16 @@ by_Subj<-group_by(DDF,No.Subject,Activity)
 TidyFile <-summarize(by_Subj,Mean.total_acc.x=mean(Mean.total_acc.x), Mean.body_acc.x=mean(Mean.body_acc.x), Mean.body_gyro.x=mean(Mean.body_gyro.x),
 Mean.total_acc.y=mean(Mean.total_acc.y), Mean.body_acc.y=mean(Mean.body_acc.y), Mean.body_gyro.y=mean(Mean.body_gyro.y),
 Mean.total_acc.z=mean(Mean.total_acc.z), Mean.body_acc.z=mean(Mean.body_acc.z), Mean.body_gyro.z=mean(Mean.body_gyro.z))
+MFile<-read.table("activity_labels.txt")
+XTable<-MFile[,2]
+### Changing the activity number to something meaningful
+TidyFile<-mutate(TidyFile,Activity=XTable[Activity])
 write.table(TidyFile,"./MFiles/TidyFile.txt",row.name=FALSE)
 TidyFile
 }
 
 TidyData <- function ( ){
 ## This script controls the order in which the data is prepared
-## 
 library(dplyr)
 Mess<-paste("==================================")
 print(Mess)
