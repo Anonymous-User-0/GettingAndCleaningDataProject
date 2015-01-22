@@ -32,3 +32,4 @@ each observation organizez by subject and activity.  The file created is named "
 3. source("run_analysis.R")
 4. Run Tidy_Data(). A series of messages will appear indicating the steps in the process. When done you will be
 able to use R to open the file "./MFiles/TidyFile.txt" and check the summarized data.
+*** Warning: The process of extracting and preparing the files may take several minutes.Please be patient!
