@@ -23,7 +23,8 @@ the mean and standard deviation of the data contained in the "MFiles\Inertial Si
 outcome of this function is the file "Merged_Summary.txt"
 
 3. Tidy_Data (): This function uses the file "Merged_Summary.txt" to create a file that contains the average of
-each observation organizez by subject and activity.  The file created is named "TidyFile.txt" with the following structure
+each observation organizez by subject and activity.  The file created is named "TidyFile.txt" with the following structure:
+
 180 rows corresponding 6 activities per each of the 30 subjects. It has 11 columns, the first two identified the subject and the name of the activity and the remaining 9 are the means for each of the variables (3: total_acc, body_gyro, and body_acc) by coordinate ("x","y", and "z"). This is my interpretation of what the data is, as the statement of the problem was not clear as to what measurements they were refering to (Hopefully, in real life, the problem is clarified before attempting anything!).
 
 4.TidyData(): This a short function that runs the previous functions in sequence to obtain the file "TidyFile.txt"
